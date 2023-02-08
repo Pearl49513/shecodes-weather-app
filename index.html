@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/a36de82bc6.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link href="src/styles.css" rel="stylesheet" />
+
+    <title>Shecodes Weather App</title>
+  </head>
+  <body>
+    <!--Search Bar-->
+    <div class="container">
+      <form id="citySearchBar">
+        <div class="row">
+          <div class="col">
+            <input
+              type="search"
+              class="form-control"
+              id="citySearchInput"
+              placeholder="Enter City"
+            />
+          </div>
+          <div class="col">
+            <input type="submit" class="btn btn-primary" value="SEARCH" />
+          </div>
+          <div class="col">
+            <button
+              type="button"
+              id="current-location"
+              class="btn btn-secondary"
+            >
+              CURRENT
+            </button>
+          </div>
+        </div>
+      </form>
+      <!--Search Bar End-->
+
+      <br />
+      <!--Current Weather-->
+      <div class="row">
+        <div class="col">
+          <h1>30<sup>℃</sup></h1>
+        </div>
+        <div class="col">
+          <img src="images/Sunny.png" class="current-weather-image" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6"><p class="current-date">Saturday</p></div>
+      </div>
+
+      <div class="row">
+        <div class="col"><h3>NEW YORK CITY</h3></div>
+      </div>
+      <div class="row">
+        <div class="col"><h4>12:00 AM</h4></div>
+      </div>
+      <div class="row time-phase-icon">
+        <div class="col" id="sun-moon"><i class="fa-solid fa-moon"></i></div>
+      </div>
+      <!--Card with images-->
+
+      <div class="m-auto card border-0" style="width: 700px">
+        <div class="m-auto card-body rounded-0 shadow" style="width: 650px">
+          <h5 class="card-title">Forecast</h5>
+
+          <div class="row forecast" style="width: 650px">
+            <div class="col weekday">
+              <i class="fa-solid fa-sun next-weather-icon"></i>
+              <p class="week">Sun</p>
+            </div>
+
+            <div class="col weekday">
+              <i class="fa-solid fa-cloud next-weather-icon"></i>
+              <p class="week">Mon</p>
+            </div>
+
+            <div class="col weekday">
+              <i class="fa-solid fa-cloud-showers-heavy next-weather-icon"></i>
+              <p class="week">Tue</p>
+            </div>
+
+            <div class="col weekday">
+              <i class="fa-sharp fa-solid fa-snowflake next-weather-icon"></i>
+              <p class="week">Wed</p>
+            </div>
+
+            <div class="col weekday">
+              <i class="fa-solid fa-wind next-weather-icon"></i>
+              <p class="week">Thu</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
